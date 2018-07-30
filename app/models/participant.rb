@@ -1,6 +1,9 @@
+require 'carrierwave/orm/activerecord'
+
 class Participant < ApplicationRecord
   before_save { email.downcase! }
   has_secure_password
+  mount_uploader :picture, ParticipantPictureUploader
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
@@ -16,7 +19,5 @@ class Participant < ApplicationRecord
   validates :zip,           presence: true, length: { maximum: 5 }
   validates :birthdate,     presence: true
   validates :password,      presence: true, length: { minimum: 6 }
-
-  
 
 end

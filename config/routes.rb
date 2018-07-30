@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get  '/about',                 to: 'static_pages#about'
   get  '/participant_signup',    to: 'participants#new'
   get  '/leader_signup',         to: 'leaders#new'
+
+  resources :participants
 end

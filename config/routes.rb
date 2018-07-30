@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'participants/new'
   root 'static_pages#home'
   get  '/blog',      to: 'static_pages#blog'
   get  '/trips',     to: 'static_pages#trips'

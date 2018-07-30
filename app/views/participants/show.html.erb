@@ -1,5 +1,11 @@
 <% provide(:title, @participant.first_name + " " + @participant.last_name) %>
-<h1>
-  <%= picture_for @participant %>
-  <%= @participant.first_name + " " + @participant.last_name %>
-</h1>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="participant_info">
+      <h1>
+        <%= picture_for @participant %>
+        <%= @participant.first_name + " " + @participant.last_name %>
+      </h1>
+    </section>
+  </aside>
+</div>

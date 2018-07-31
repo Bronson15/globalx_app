@@ -9,4 +9,9 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
+  #boolean for if participant is logged in
+  def is_logged_in?
+    !session[:participant_id].nil?
+  end
 end

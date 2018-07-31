@@ -1,0 +1,12 @@
+tester:
+  first_name: Test
+  last_name: Participant
+  email: test@participant.com
+  address: 123 Test Street
+  address2:
+  city: Test
+  state: GA
+  zip: 30004
+  phone_number: 1234567890
+  birthdate: 2000-01-01
+  password_digest: <%= Participant.digest('password') %>

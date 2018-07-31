@@ -1,5 +1,6 @@
 module ApplicationHelper
 
+  #allows easy access to titling pages
   def full_title(page_title = '')
     base_title = "global(x)"
     if page_title.empty?

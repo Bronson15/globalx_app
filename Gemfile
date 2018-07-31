@@ -20,6 +20,7 @@ gem 'mini_magick'
 gem 'fog'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'dropzonejs-rails'
 
 group :development, :test do
   gem 'sqlite3'

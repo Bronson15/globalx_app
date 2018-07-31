@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_30_173408) do
+ActiveRecord::Schema.define(version: 2018_07_31_153428) do
+
+  create_table "media", force: :cascade do |t|
+    t.string "file_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "participants", force: :cascade do |t|
     t.string "first_name"

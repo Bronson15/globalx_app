@@ -90,6 +90,8 @@ GEM
     crass (1.0.4)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
+    dropzonejs-rails (0.8.2)
+      rails (> 3.1)
     erubi (1.7.1)
     excon (0.62.0)
     execjs (2.7.0)
@@ -443,6 +445,7 @@ DEPENDENCIES
   carrierwave
   chromedriver-helper
   coffee-rails (~> 4.2)
+  dropzonejs-rails
   fog
   guard (= 2.13.0)
   guard-minitest (= 2.4.4)

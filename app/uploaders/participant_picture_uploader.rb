@@ -6,9 +6,9 @@ class ParticipantPictureUploader < CarrierWave::Uploader::Base
   process resize_to_fit: [100, 100]
 
   if Rails.env.production?
-    storage: :fog
+    storage :fog
   else
-    storage: :file
+    storage :file
   end
 
 

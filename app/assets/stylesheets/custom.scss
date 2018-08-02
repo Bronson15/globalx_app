@@ -155,6 +155,25 @@ input {
 	}
 }
 
+.img-thumbnail {
+	height: 10rem;
+}
+
+.checkbox {
+	margin-top: -1rem;
+	margin-bottom: 1rem;
+
+	span {
+		margin-left: 2rem;
+		font-weight: normal;
+	}
+}
+
+#session_remember_me {
+	width: auto;
+	margin-left: 0;
+}
+
 //misc 
 
 .debug_dump {
@@ -165,6 +184,4 @@ input {
   @include box_sizing;
 }
 
-.img-thumbnail {
-	height: 10rem;
-}
+

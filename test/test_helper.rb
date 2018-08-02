@@ -14,4 +14,18 @@ class ActiveSupport::TestCase
   def is_logged_in?
     !session[:participant_id].nil?
   end
+
+  def log_in_as(participant)
+    session[:participant_id] = participant_id
+  end
+end
+
+class ActionDispatch::IntegrationTest
+
+  def log_in_as(participant, password: 'password', remember_me: '1')
+    post login_path, params: { session: { email: participant.email,
+                                          password: password,
+                                          remember_me: remember_me
+                                        }}
+  end
 end

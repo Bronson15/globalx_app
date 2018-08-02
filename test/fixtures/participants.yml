@@ -3,7 +3,6 @@ tester:
   last_name: Participant
   email: test@participant.com
   address: 123 Test Street
-  address2:
   city: Test
   state: GA
   zip: 30004

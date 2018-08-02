@@ -115,4 +115,8 @@ class ParticipantTest < ActiveSupport::TestCase
     assert_not @participant.valid?
   end
 
+  test "authenticated? should return false for a participant with nil digest" do 
+    assert_not @participant.authenticated?('')
+  end
+
 end

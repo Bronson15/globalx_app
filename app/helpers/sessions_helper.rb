@@ -12,6 +12,10 @@ module SessionsHelper
     cookies.permanent[:remember_token] = participant.remember_token
   end
 
+  def current_participant?(participant)    
+    participant == current_participant
+  end
+
   #returns logged in participant
   def current_participant
     if (participant_id = session[:participant_id])
@@ -42,4 +46,13 @@ module SessionsHelper
     session.delete(:participant_id)
     @current_participant = nil
   end 
+
+  def redirect_back_or(default)
+    redirect_to(session[:forwarding_url] || default)
+    session.delete(:forwarding_url)
+  end
+
+  def store_location
+    session[:forwarding_url] = request.original_url if reguest.get?
+  end
 end

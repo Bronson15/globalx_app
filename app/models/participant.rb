@@ -20,9 +20,8 @@ class Participant < ApplicationRecord
   validates :state,                   presence: true, length: { maximum: 2 }
   validates :zip,                     presence: true, length: { maximum: 5 }
   validates :birthdate,               presence: true
-  validates :password,                presence: true, length: { minimum: 6 }
+  validates :password,                presence: true, length: { minimum: 6 }, allow_nil: true
   validate  :picture_size
-
 
   #returns hash digest of given string
   def Participant.digest(string)

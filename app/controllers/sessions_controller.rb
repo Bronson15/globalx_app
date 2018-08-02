@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     if participant && participant.authenticate(params[:session][:password])
       log_in participant
       params[:session][:remember_me] == '1' ? remember(participant) : forget(participant)
-      redirect_to participant
+      redirect_back_or participant
     #else alert the user that the provided info was wrong  
     else
       flash.now[:danger] = 'Invalid credentials.'

@@ -24,10 +24,9 @@ class ParticipantsSignupTest < ActionDispatch::IntegrationTest
   test "valid signup information" do 
     get participant_signup_path
     assert_difference 'Participant.count', 1 do 
-      #we use test2@participant.com here to precent duplicate email error
       post participants_path, params: { participant: { first_name: "Test",
                                                        last_name: "Participant",
-                                                       email: "test2@participant.com",
+                                                       email: "integrationtest@participant.com",
                                                        phone_number: "1234567890",
                                                        address: "123 Test Street",
                                                        address2: "",

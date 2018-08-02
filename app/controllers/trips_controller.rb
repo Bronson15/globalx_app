@@ -18,7 +18,18 @@ class TripsController < ApplicationController
     end
   end
 
-  def destroy
+  def edit
+    @trip = Trip.find(params[:id])
+  end
+
+  def update
+    @trip = Trip.find(params[:id])
+    if @trip.update_attributes(trip_params)
+      flash[:success] = "Trip updated"
+      redirect_to @trip
+    else
+      render 'edit'
+    end
   end
 
   private

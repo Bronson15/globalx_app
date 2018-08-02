@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
 
   get     '/trips',                 to: 'static_pages#trips'
-  get     '/trips/new',             to: 'trips#new'
+  get     '/trip/new',              to: 'trips#new'
 
 
   resources :participants

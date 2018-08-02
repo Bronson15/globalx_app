@@ -1,8 +1,14 @@
 require 'test_helper'
 
 class TripsControllerTest < ActionDispatch::IntegrationTest
+  
+  def setup
+    @admin = participants(:admin)
+  end
+
   test "should get new" do
-    get trip_new_path
+    log_in_as(@admin)
+    get new_trip_path
     assert_response :success
   end
 end

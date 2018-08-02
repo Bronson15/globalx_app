@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ParticipantsSignupTest < ActionDispatch::IntegrationTest
   test "invalid signup information" do 
-    get participant_signup_path 
+    get signup_path 
     assert_no_difference 'Participant.count' do 
     post participants_path, params: { participant: { first_name: "",
                                                      last_name: "",
@@ -22,7 +22,7 @@ class ParticipantsSignupTest < ActionDispatch::IntegrationTest
   end
 
   test "valid signup information" do 
-    get participant_signup_path
+    get signup_path
     assert_difference 'Participant.count', 1 do 
       post participants_path, params: { participant: { first_name: "Test",
                                                        last_name: "Participant",

@@ -1,6 +1,11 @@
 class ParticipantsController < ApplicationController
-  before_action :logged_in_participant, only: [:edit, :update]
+  before_action :logged_in_participant, only: [:index, :edit, :update, :destroy]
   before_action :correct_participant,   only: [:edit, :update]
+  before_action :admin_user, only: :destroy
+
+  def index
+    @participants = Participant.paginate(page: params[:page])
+  end
 
   #show all registered participants
   def show
@@ -38,6 +43,12 @@ class ParticipantsController < ApplicationController
     end
   end
 
+  def destroy
+    Participant.find(params[:id]).destroy
+    flash[:success] = "Participant deleted"
+    redirect_to participants_url
+  end
+
   private
 
     #only allow these params. prevents giving URL queries that could mess with app.
@@ -58,5 +69,9 @@ class ParticipantsController < ApplicationController
     def correct_participant
       @participant = Participant.find(params[:id])
       redirect_to(root_url) unless current_participant?(@participant)
+    end
+
+    def admin_user
+      redirect_to(root_url) unless current_participant.admin?
     end
 end

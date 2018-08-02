@@ -8,7 +8,7 @@ class ParticipantsControllerTest < ActionDispatch::IntegrationTest
   end 
 
   test "should get new" do
-    get participant_signup_path
+    get signup_path
     assert_response :success
   end
 

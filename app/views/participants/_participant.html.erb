@@ -1,0 +1,8 @@
+<li>
+  <%= picture_for participant %>
+  <%= link_to participant.first_name + " " + participant.last_name, participant%>
+  <% if current_participant.admin? && !current_participant?(participant) %>
+    | <%= link_to "Delete", participant, method: :delete, 
+                                         data: { confirm: "Are you sure?" } %>
+  <% end %>
+</li>

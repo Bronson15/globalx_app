@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_02_133702) do
+ActiveRecord::Schema.define(version: 2018_08_02_180415) do
 
   create_table "participants", force: :cascade do |t|
     t.string "first_name"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 2018_08_02_133702) do
     t.string "password_digest"
     t.string "picture"
     t.string "remember_digest"
+    t.boolean "admin", default: false
+    t.boolean "leader", default: false
     t.index ["email"], name: "index_participants_on_email", unique: true
   end
 

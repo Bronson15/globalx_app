@@ -2,4 +2,11 @@
   <%= link_to trip.name, trip %>
   <%= " | " + trip.start_date.strftime("%m/%d/%Y") + " - " + trip.end_date.strftime("%m/%d/%Y" + " | ") %>
   <%= trip.location %>
+
+  <% if logged_in? %>
+    <% if current_participant.admin? %>
+      | <%= link_to "Delete", trip, method: :delete, 
+                                           data: { confirm: "Are you sure?" } %>
+    <% end %>
+  <% end %>
 </li>

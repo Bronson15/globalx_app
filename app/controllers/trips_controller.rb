@@ -1,4 +1,6 @@
 class TripsController < ApplicationController
+  before_action :logged_in_admin, only: :new
+  before_action :admin_user, only: [:create, :destroy]
 
   def index
     @trips = Trip.paginate(page: params[:page])
@@ -36,10 +38,28 @@ class TripsController < ApplicationController
     end
   end
 
+  def destroy
+    Trip.find(params[:id]).destroy
+    flash[:success] = "Trip deleted"
+    redirect_to trips_url
+  end
+
   private
 
     #only allow these params. prevents giving URL queries that could mess with app.
     def trip_params
       params.require(:trip).permit(:name, :start_date, :end_date, :location)
+    end
+
+    def admin_user
+      redirect_to(root_url) unless current_participant.admin?
+    end
+
+    def logged_in_admin
+      unless logged_in?
+        store_location
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+      end
     end
 end

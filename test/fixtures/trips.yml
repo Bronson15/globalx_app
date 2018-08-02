@@ -3,3 +3,29 @@ tester:
   start_date: 2018-09-18
   end_date: 2018-09-30
   location: HA
+
+tester2:
+  name: test2
+  start_date: 2018-09-18
+  end_date: 2018-09-30
+  location: HA
+
+tester3:
+  name: test3
+  start_date: 2018-09-18
+  end_date: 2018-09-30
+  location: HA
+
+tester4:
+  name: test4
+  start_date: 2018-09-18
+  end_date: 2018-09-30
+  location: HA
+
+<% 30.times do |n| %>
+trip_<%= n %>:
+  name: <%= "Trip #{n}" %>
+  start_date: 2018-09-18
+  end_date: 2018-09-30
+  location: HA
+<% end %>

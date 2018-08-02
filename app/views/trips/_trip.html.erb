@@ -1,0 +1,5 @@
+<li>
+  <%= link_to trip.name, trip %>
+  <%= " | " + trip.start_date.strftime("%m/%d/%Y") + " - " + trip.end_date.strftime("%m/%d/%Y" + " | ") %>
+  <%= trip.location %>
+</li>

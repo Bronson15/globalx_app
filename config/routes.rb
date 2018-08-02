@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   delete  '/logout',                to: 'sessions#destroy'
 
 
-  get     '/trips',                 to: 'static_pages#trips'
+  get     '/trips',                 to: 'trips#index'
   get     '/trip/new',              to: 'trips#new'
 
 

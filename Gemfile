@@ -21,6 +21,9 @@ gem 'fog'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'dropzonejs-rails'
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :development, :test do
   gem 'sqlite3'

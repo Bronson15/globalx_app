@@ -174,6 +174,24 @@ input {
 	margin-left: 0;
 }
 
+//trips index
+
+.trips {
+	list-style: none;
+	margin: 0;
+	font-size: 1.8rem;
+
+	li {
+		overflow: auto;
+		padding: 1rem;
+		border-bottom: .1rem solid $globalx-green;
+
+		&:first-child {
+			border-top: .1rem solid $globalx-green;
+		}
+	}
+}
+
 //misc 
 
 .debug_dump {

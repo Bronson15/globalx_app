@@ -1,0 +1,25 @@
+<%= provide(:title, "New Trip") %>
+<h1>New Trip</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@trip) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "rounded form-control" %>
+
+      <%= f.label :start_date %>
+      <%= f.text_field :start_date, class: "datepicker" %>
+
+      <%= f.label :end_date %>
+      <%= f.text_field :end_date, class: "datepicker" %>
+
+      <%= f.label :location %>
+      <%= f.text_field :location, class: "rounded form-control" %>
+      <br>
+      <br>
+      <%= f.submit "Create My Account", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

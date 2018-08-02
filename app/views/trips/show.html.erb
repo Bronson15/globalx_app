@@ -1,0 +1,14 @@
+<% provide(:title, @trip.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="trip_info">
+      <h1>
+        <%= @trip.name %>
+        <br>
+        <%= @trip.start_date.strftime("%m/%d/%Y") + " - " + @trip.end_date.strftime("%m/%d/%Y") %>
+        <br>
+        <%= @trip.location %>
+      </h1>
+    </section>
+  </aside>
+</div>

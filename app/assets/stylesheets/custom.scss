@@ -227,7 +227,7 @@ input {
     background-image: url("home-banner.png");
 
     /* Set a specific height */
-    height: 25rem; 
+    height: 35rem; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -235,8 +235,8 @@ input {
     background-repeat: no-repeat;
     background-size: cover;
 	background-position-x: 50%;
-	background-position-y: -25rem; 
-
+	background-position-y: -180px; 
+	
 
 }
 

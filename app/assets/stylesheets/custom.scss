@@ -37,7 +37,7 @@ textarea {
 }
 
 .gx-background {
-	background-image: url("gx-background.png");
+	background-image: image-url("gx-background.png");
 }
 
 // typography
@@ -228,7 +228,7 @@ input {
 
 .banner { 
     /* The image used */
-    background-image: url("home-banner.png");
+    background-image: image-url("home-banner.png");
 
     /* Set a specific height */
     height: 35rem; 

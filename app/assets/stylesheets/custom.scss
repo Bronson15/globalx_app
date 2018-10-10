@@ -36,6 +36,10 @@ textarea {
 	}
 }
 
+.gx-background {
+	background-image: url("gx-background.png");
+}
+
 // typography
 
 h1, h2, h3, h4, h5, h6 {
@@ -236,7 +240,31 @@ input {
     background-size: cover;
 	background-position-x: 50%;
 	background-position-y: -180px; 
-	
-
 }
+
+.body-copy {
+	font-family: "Helvetica Neue","Arial","sans-serif";
+	font-weight: 700;
+	font-style: normal;
+	font-size: 3.2rem;
+	letter-spacing: .1rem;
+	text-transform: none;
+	line-height: 1.5em;
+	text-align: center;
+	padding: 1.5rem;
+}
+
+.testimonial { 
+    color: white;
+    font-family: "Helvetica Neue","Arial","sans-serif";
+	font-weight: 700;
+	font-style: normal;
+	font-size: 3.2rem;
+	letter-spacing: .1rem;
+	text-transform: none;
+	line-height: 1.5em;
+	text-align: center;
+	padding: 3rem;
+}
+
 

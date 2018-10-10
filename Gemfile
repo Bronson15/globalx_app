@@ -13,7 +13,7 @@ gem 'bootstrap-datepicker-rails'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-gem 'bootsnap-sprockets', 
+gem 'bootsnap-sprockets' 
 gem 'bcrypt'
 gem 'carrierwave'
 gem 'mini_magick'

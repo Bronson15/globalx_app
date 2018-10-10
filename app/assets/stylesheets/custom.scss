@@ -220,4 +220,23 @@ input {
   @include box_sizing;
 }
 
+//main
+
+.banner { 
+    /* The image used */
+    background-image: url("home-banner.png");
+
+    /* Set a specific height */
+    height: 25rem; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    //background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-position-x: 50%;
+	background-position-y: -25rem; 
+
+
+}
 

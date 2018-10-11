@@ -18,9 +18,8 @@
 
 
 //= require jquery    
-//= require jquery-ui 
-//= require jquery_ujs
-//= require bootstrap-sprockets
+//= require jquery-ui
+//= require bootstrap
 //= require bootstrap-datepicker
 //= require dropzone
 

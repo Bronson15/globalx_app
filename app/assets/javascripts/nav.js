@@ -15,4 +15,4 @@
   $('#nav-toggle').click(function() {
     $('nav ul').toggle();
   });
-})(jQuery);
+});

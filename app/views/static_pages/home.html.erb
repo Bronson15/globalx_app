@@ -7,8 +7,8 @@
   </div>
 </section>
 <section>
-  <div class="container">
-    <div class="row text-center">
+  <div class="container-fluid justify-content-center">
+    <div class="col-md-offset-1">
       <div class="col-2 img-col">
         <div class="overlay-container">
           <%= image_tag "blog.png", alt: "Blog", class: "overlay-image" %>
@@ -30,7 +30,17 @@
           </div>
         </div>
       </div>
-    </div>
+      <div class="col-2 img-col">
+        <div class="overlay-container">
+          <%= image_tag "signup.png", alt: "Blog", class: "overlay-image" %>
+          <div class="overlay">
+            <div class="text">
+              <%= link_to "Signup for our site!", signup_path %>
+            </div>
+          </div>
+        </div>
+      </div>
+      
   </div>
 </section>
 <section class="gx-background">

@@ -38,13 +38,13 @@ textarea {
 
 .row {
 	width: 100%;
-	margin-left: 10%;
+	margin: 0 auto;
 	text-align: center;
+	display: inline-block;
 }
 
 .col-2 {
     float: left;
-    width: 50%;
     padding-top: 3rem;
     padding-bottom: 3rem;
     display: table;
@@ -88,6 +88,7 @@ textarea {
 
 .overlay-container:hover .overlay {
   height: 100%;
+  opacity: .9;
 }
 
 .text {

@@ -7,24 +7,26 @@
   </div>
 </section>
 <section>
-  <div class="row">
-    <div class="col-2 center img-col">
-      <div class="overlay-container">
-        <%= image_tag "blog.png", alt: "Blog", class: "overlay-image" %>
-        <div class="overlay">
-          <div class="text">
-            <%= link_to "Check out our Leader Blog!", blog_path %>
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-2 img-col">
+        <div class="overlay-container">
+          <%= image_tag "blog.png", alt: "Blog", class: "overlay-image" %>
+          <div class="overlay">
+            <div class="text">
+              <%= link_to "Check out our Leader Blog!", blog_path %>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-      
-    <div class="col-2 center">
-      <div class="overlay-container">
-        <%= image_tag "trips.png", alt: "Blog", class: "overlay-image" %>
-        <div class="overlay">
-          <div class="text">
-            <%= link_to "Check out our current Trip list!", trips_path %>
+        
+      <div class="col-2 img-col">
+        <div class="overlay-container">
+          <%= image_tag "trips.png", alt: "Blog", class: "overlay-image" %>
+          <div class="overlay">
+            <div class="text">
+              <%= link_to "Check out our current Trip list!", trips_path %>
+            </div>
           </div>
         </div>
       </div>

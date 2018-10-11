@@ -346,4 +346,28 @@ input {
 	padding: 3rem;
 }
 
+.trip-banner {
+	background-image: image-url("gx-background.png");
+	height: 35rem; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    //background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-position-x: 50%;
+	background-position-y: -180px; 
+	
+	color: $globalx-green;
+	font-family: "Helvetica Neue","Arial","sans-serif";
+	font-weight: 700;
+	font-style: normal;
+	font-size: 3.2rem;
+	letter-spacing: .1rem;
+	text-transform: none;
+	line-height: 1.5em;
+	text-align: center;
+	padding: 3rem;
+}
+
 
